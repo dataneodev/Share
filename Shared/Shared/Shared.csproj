@@ -1,0 +1,110 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Vero.$(MSBuildProjectName)</RootNamespace>
+        <Configurations>Test;Production;Development</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <NoWarn>
+            $(NoWarn);CS8618, EF1001
+        </NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Production' ">
+        <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Development' ">
+        <DebugSymbols Condition=" '$(DebugSymbols)' == '' ">true</DebugSymbols>
+        <Optimize Condition=" '$(Optimize)' == '' ">false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup>
+        <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="DBMigrators\**"/>
+        <EmbeddedResource Remove="DBMigrators\**"/>
+        <None Remove="DBMigrators\**"/>
+        <None Remove="Files\Logo\verocargo_logo.png"/>
+        <None Remove="Pdf\Files\Fonts\Roboto.ttf"/>
+        <None Remove="Pdf\Files\Logo\verocargo_logo.png"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Pdf\Files\Fonts\Roboto.ttf"/>
+        <EmbeddedResource Include="Pdf\Files\Logo\verocargo_logo.png"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="9.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="9.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0"/>
+        <PackageReference Include="AutoMapper" Version="13.0.1"/>
+        <PackageReference Include="ClosedXML" Version="0.104.2"/>
+        <PackageReference Include="CSharpDiscordWebhook.NET" Version="2.7.1"/>
+        <PackageReference Include="Dapper" Version="2.1.35"/>
+        <PackageReference Include="Dapper.SqlBuilder" Version="2.0.78"/>
+        <PackageReference Include="DateOnlyTimeOnly.AspNet" Version="2.1.1"/>
+        <PackageReference Include="JasperFx.CodeGeneration" Version="3.7.2"/>
+        <PackageReference Include="JasperFx.CodeGeneration.Commands" Version="3.7.2"/>
+        <PackageReference Include="Marten" Version="7.39.6"/>
+        <PackageReference Include="MassTransit" Version="8.3.3"/>
+        <PackageReference Include="MassTransit.Abstractions" Version="8.3.3"/>
+        <PackageReference Include="MassTransit.Marten" Version="8.3.3"/>
+        <PackageReference Include="MediatR.Contracts" Version="2.0.1"/>
+        <PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="5.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.0"/>
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.3"/>
+        <PackageReference Include="FluentValidation" Version="11.11.0"/>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0"/>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0"/>
+        <PackageReference Include="Npgsql" Version="9.0.2"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.2"/>
+        <PackageReference Include="Oakton" Version="6.3.0"/>
+        <PackageReference Include="Oakton.AspNetCore" Version="3.0.0"/>
+        <PackageReference Include="prometheus-net" Version="8.2.1"/>
+        <PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1"/>
+        <PackageReference Include="prometheus-net.AspNetCore.HealthChecks" Version="8.2.1"/>
+        <PackageReference Include="QuestPDF" Version="2024.12.1"/>
+        <PackageReference Include="RestSharp" Version="112.1.0"/>
+        <PackageReference Include="Serilog" Version="4.2.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="9.0.0"/>
+        <PackageReference Include="Serilog.Extensions.Logging" Version="9.0.0"/>
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0"/>
+        <PackageReference Include="Serilog.Sinks.File" Version="6.0.0"/>
+        <PackageReference Include="Serilog.Sinks.Grafana.Loki" Version="8.3.0"/>
+        <PackageReference Include="SkiaSharp" Version="3.116.1"/>
+        <PackageReference Include="SkiaSharp.HarfBuzz" Version="3.116.1"/>
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.116.1"/>
+        <PackageReference Include="Svg.Skia" Version="2.0.0.4"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0"/>
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="8.3.0.1"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\Shared.Abstractions\Shared.Abstractions.csproj"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Folder Include="WebApi\"/>
+    </ItemGroup>
+
+
+</Project>

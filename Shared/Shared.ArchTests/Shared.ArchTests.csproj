@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="FluentAssertions" Version="7.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.Json" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0"/>
+        <PackageReference Include="NetArchTest.Rules" Version="1.3.2"/>
+        <PackageReference Include="xunit" Version="2.9.2"/>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Accounting\Accounting.API\Accounting.API.csproj"/>
+        <ProjectReference Include="..\..\Accounting\Accounting.Application\Accounting.Application.csproj"/>
+        <ProjectReference Include="..\..\Accounting\Accounting.Contracts\Accounting.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Accounting\Accounting.Domain\Accounting.Domain.csproj"/>
+        <ProjectReference Include="..\..\Accounting\Accounting.Infrastructure\Accounting.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Accounting\Accounting.Translation\Accounting.Translation.csproj"/>
+        <ProjectReference Include="..\..\Assignments\Assignments.API\Assignments.API.csproj"/>
+        <ProjectReference Include="..\..\Assignments\Assignments.Application\Assignments.Application.csproj"/>
+        <ProjectReference Include="..\..\Assignments\Assignments.Contracts\Assignments.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Assignments\Assignments.Domain\Assignments.Domain.csproj"/>
+        <ProjectReference Include="..\..\Assignments\Assignments.Infrastructure\Assignments.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Auth\Auth.API\Auth.API.csproj"/>
+        <ProjectReference Include="..\..\Auth\Auth.Application\Auth.Application.csproj"/>
+        <ProjectReference Include="..\..\Auth\Auth.Contracts\Auth.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Auth\Auth.Domain\Auth.Domain.csproj"/>
+        <ProjectReference Include="..\..\Auth\Auth.Infrastructure\Auth.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Company\Company.API\Company.API.csproj"/>
+        <ProjectReference Include="..\..\Company\Company.Application\Company.Application.csproj"/>
+        <ProjectReference Include="..\..\Company\Company.Contracts\Company.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Company\Company.Domain\Company.Domain.csproj"/>
+        <ProjectReference Include="..\..\Company\Company.Infrastructure\Company.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Customers\Customers.API\Customers.API.csproj"/>
+        <ProjectReference Include="..\..\Customers\Customers.Application\Customers.Application.csproj"/>
+        <ProjectReference Include="..\..\Customers\Customers.Contracts\Customers.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Customers\Customers.Domain\Customers.Domain.csproj"/>
+        <ProjectReference Include="..\..\Customers\Customers.Infrastructure\Customers.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Events\Events.API\Events.API.csproj"/>
+        <ProjectReference Include="..\..\Events\Events.Application\Events.Application.csproj"/>
+        <ProjectReference Include="..\..\Events\Events.Contracts\Events.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Events\Events.Domain\Events.Domain.csproj"/>
+        <ProjectReference Include="..\..\Events\Events.Infrastructure\Events.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Files\Files.API\Files.API.csproj"/>
+        <ProjectReference Include="..\..\Files\Files.Application\Files.Application.csproj"/>
+        <ProjectReference Include="..\..\Files\Files.Contracts\Files.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Files\Files.Domain\Files.Domain.csproj"/>
+        <ProjectReference Include="..\..\Files\Files.Infrastructure\Files.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Gateway\Gateway.API\Gateway.API.csproj"/>
+        <ProjectReference Include="..\..\Gateway\Gateway.Infrastructure\Gateway.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Gateway\Gateway.Translation\Gateway.Translation.csproj"/>
+        <ProjectReference Include="..\..\Hub\Hub.API\Hub.API.csproj"/>
+        <ProjectReference Include="..\..\Hub\Hub.Application\Hub.Application.csproj"/>
+        <ProjectReference Include="..\..\Hub\Hub.Domain\Hub.Domain.csproj"/>
+        <ProjectReference Include="..\..\Hub\Hub.Infrastructure\Hub.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Hub\Hub.Integration\Hub.Integrations.csproj"/>
+        <ProjectReference Include="..\..\Notifications\Notifications.API\Notifications.API.csproj"/>
+        <ProjectReference Include="..\..\Notifications\Notifications.Application\Notifications.Application.csproj"/>
+        <ProjectReference Include="..\..\Notifications\Notifications.Contracts\Notifications.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Notifications\Notifications.Domain\Notifications.Domain.csproj"/>
+        <ProjectReference Include="..\..\Notifications\Notifications.Infrastructure\Notifications.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Offers\Offers.API\Offers.API.csproj"/>
+        <ProjectReference Include="..\..\Offers\Offers.Application\Offers.Application.csproj"/>
+        <ProjectReference Include="..\..\Offers\Offers.Contracts\Offers.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Offers\Offers.Domain\Offers.Domain.csproj"/>
+        <ProjectReference Include="..\..\Offers\Offers.Infrastructure\Offers.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Reports\Reports.API\Reports.API.csproj"/>
+        <ProjectReference Include="..\..\Reports\Reports.Application\Reports.Application.csproj"/>
+        <ProjectReference Include="..\..\Reports\Reports.Contracts\Reports.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Reports\Reports.Domain\Reports.Domain.csproj"/>
+        <ProjectReference Include="..\..\Reports\Reports.Infrastructure\Reports.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Subcontractors\Subcontractors.API\Subcontractors.API.csproj"/>
+        <ProjectReference Include="..\..\Subcontractors\Subcontractors.Application\Subcontractors.Application.csproj"/>
+        <ProjectReference Include="..\..\Subcontractors\Subcontractors.Contracts\Subcontractors.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Subcontractors\Subcontractors.Domain\Subcontractors.Domain.csproj"/>
+        <ProjectReference Include="..\..\Subcontractors\Subcontractors.Infrastructure\Subcontractors.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.API\Transporting.API.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.Application\Transporting.Application.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.Contracts\Transporting.Contracts.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.Domain\Transporting.Domain.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.Infrastructure\Transporting.Infrastructure.csproj"/>
+        <ProjectReference Include="..\..\Transporting\Transporting.Translation\Transporting.Translation.csproj"/>
+        <ProjectReference Include="..\Shared\Shared.csproj"/>
+    </ItemGroup>
+
+</Project>
